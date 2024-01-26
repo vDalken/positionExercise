@@ -9,61 +9,45 @@ html,body{
     box-sizing: border-box;
 }
 
-body, .logo, .header, .first-aside, main, .second-aside{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.mother{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: .7fr .3fr 1fr 1fr;
+    grid-template-areas: 
+    "logo header header header"
+    "first-aside first-aside main second-aside";
 }
 
-.mother, .logo, .header, .first-aside, main, .second-aside{
+.logo, .header, .first-aside, main, .second-aside{
     border: 2px solid;
     border-radius: 1rem;
-    position: relative;
-}
-
-.mother{
-    width: 80%;
-    height: 30%;
-    border-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
 .logo{
-    width: 20%;
-    height: 40%;
-    border-color: blue;
-    color: blue;
+    border-color: red;
+    grid-area: logo;
 }
 
 .header{
-   width: 80%;
-   height: 40%;
-   border-color: green;
-   right: -20%;
-   top: -42%;
-   color: green;
+    border-color: blue;
+    grid-area: header;
 }
 
 .first-aside{
-    height: 60%;
-    width: 35%;
     border-color: black;
-    top: -43%;
+    grid-area: first-aside;
 }
 
 main{
-    height: 60%;
-    width: 40%;
     border-color: orange;
-    top: -105%;
-    right: -35%;
-    color: orange;
+    grid-area: main;
 }
 
 .second-aside{
-    height: 60%;
-    width: 25%;
-    border-color: yellow;
-    top: -166%;
-    right: -75%;
-    color: yellow;
+    border-color: red;
+    grid-area: second-aside;
 }
